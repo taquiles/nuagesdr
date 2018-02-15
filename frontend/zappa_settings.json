@@ -1,0 +1,11 @@
+{
+    "frontend": {
+        "aws_region": "eu-west-1",
+        "django_settings": "",
+        "profile_name": "default",
+        "project_name": "frontend",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-4pcksdmkn",
+        "manage_roles": false
+    }
+}

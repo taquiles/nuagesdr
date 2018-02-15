@@ -1,0 +1,6 @@
+<v-container grid-list-md fluid>
+    <div v-for="riskType in riskTypes">
+        <buildForm v-bind:riskType={riskType}>
+        </buildForm>
+    </div>
+</v-container>

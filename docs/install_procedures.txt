@@ -1,0 +1,33 @@
+
+$ git init
+
+$ npm init
+
+alias python=python3.6
+## should be version  3.6.x
+python --version 
+
+
+# Add to .bashrc or .profile:
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+
+$ source ~/.bashrc
+
+$ mkvirtualenv threefingers
+$ workon threefingers
+
+(env) $ pip install djangorestframework django python-vuejs
+(env) $ django-admin startproject nuages
+(env) $ cd nuages
+(env) $ ./manage.py startapp backend
+(env) $ pyvue djstartvueapp frontend
+
+$ pip freeze > requirements.txt
+
+$ git config --global credential.helper cache
+$ git remote add origin https://github.com/taquiles/threefingers.git
+$ git push  origin HEAD:master
+
+

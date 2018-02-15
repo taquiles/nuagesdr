@@ -1,0 +1,15 @@
+<v-flex xs4>
+    <v-card>
+        <div v-if='getFieldType==="text" || getFieldType==="number"'>
+            <component-TextNumber :fieldInfo="getFieldInfo"></component-TextNumber>
+        </div>    
+        
+        <div v-if='getFieldType==="date"'>
+            <component-date :fieldInfo="getFieldInfo"></component-date>
+        </div>                
+        
+        <div v-if='getFieldType==="enum"'>
+            <component-enum :fieldInfo="getFieldInfo"></component-enum>
+        </div>
+    </v-card>
+</v-flex>

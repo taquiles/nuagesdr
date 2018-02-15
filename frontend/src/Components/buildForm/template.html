@@ -1,0 +1,17 @@
+<v-container grid-list-md>
+    <v-layout wrap>
+        <v-card flat tile>
+            <v-card-title primary-title style="color:darkblue">
+                Risk Type: {{getRiskTypeName}}
+            </v-card-title>
+            <p></p>
+            <p></p>
+            <p></p>
+            <v-form>
+                <div v-for="field in getRiskTypeFieldNames ">
+                    <componentForm :fieldInfo='field'></componentForm>
+                </div>
+            </v-form>
+        </v-card>
+    </v-layout>
+</v-container>
