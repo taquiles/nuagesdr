@@ -25,14 +25,15 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 ![ERD](https://github.com/taquiles/nuagesdr/blob/master/docs/ERD-NuagesDR.png)
 
 
-# Requisits and Configuration
+# Requisites and Configuration
 
   1. To run this showcase, and for better compliance with tests done, verify if the following versions are installed:
   
   * Python and pip: 6.3.1
   * node : 6.10.3
+  * *virtualenv* installed
 
-  2. In order to configure data access *settings.py* must updated
+  2. In order to configure database access *settings.py* must updated
   
   	2.1. Configure the database name (*DATABASES.NAME*);
   	2.2. Update *user* and *password* with right permissions  (*DATABASES.USER* and *DATABASES.PASSWORD*);
@@ -52,19 +53,27 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 	     }
 	   }
   
-  3. Run the Migration that will create tables and load data:
+  3. Create Python Environment:
+  	
+  		cd <project_root> # that would be nuagesdr
+  		cd nuagedr
+  		virtualenv --python=python3.6 env
+  		source env/bin/activate
+  		
+  
+  4. Run the Migration that will create tables and load data:
   
     cd nuagesdr/nuagesdr
     python ./manage.py migrate
     python manage.py loaddata backend/fixtures/initial_data.json 
 
   
-  4. Install backend python packages:
+  5. Install backend python packages:
   
 		cd <project_root> # that would be nuagesdr
 		pip install -r requirements.txt
   
-  5. Install frontend npm packages:
+  6. Install frontend npm packages:
   
 		cd <project_root> # that would be nuagesdr
 		cd frontend
