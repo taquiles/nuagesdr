@@ -20,10 +20,11 @@ Vue.component('component-date', {
   props: ['fieldInfo'],
   template: '\
     <b-field class="container" :label="fieldInfo.field_name">\
-        <b-datepicker\
-          placeholder="Click to select..."\
-        >\
-    </b-datepicker>'
+        	<b-datepicker\
+        	  placeholder="Click to select..."\
+        	>\
+    		</b-datepicker>\
+    </b-field>'
 })
 
 Vue.component('component-TextNumber', {

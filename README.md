@@ -11,7 +11,7 @@ The Use case is depicted bellow.
 
 # Architecture
 
-The pre requisits included Python and Vue (ES6 flavor).
+The pre requisites included Python and Vue (ES6 flavor).
 
 DjangoRestframework, a Django framework, was used for Rest Library and for the MVT pattern (Model-View-Template). Other option, with similar features, would be Flask.
 
@@ -33,7 +33,7 @@ The ER Diagram below includes two more tables to contextualize properly tables t
   * node : 6.10.3
   * *virtualenv* installed
 
-  2. In order to configure database access *settings.py* must updated
+  2. Edit *settings.py* to configure database access
   
   	2.1. Configure the database name (*DATABASES.NAME*);
   	2.2. Update *user* and *password* with right permissions  (*DATABASES.USER* and *DATABASES.PASSWORD*);
@@ -53,27 +53,34 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 	     }
 	   }
   
-  3. Create Python Environment:
+  3. After database access configuration, you may choose to run
+  
+		chmod -x install_all.sh
+		./install.sh
+  		
+	 	which will perfom all the remaining step and Startup the Application
+  
+  4. Create Python Environment:
   	
-  		cd <project_root> # that would be nuagesdr
-  		cd nuagedr
-  		virtualenv --python=python3.6 env
-  		source env/bin/activate
+		cd <project_root> # that would be nuagesdr
+		cd nuagedr
+		virtualenv --python=python3.6 env
+		source env/bin/activate
   		
   
-  4. Run the Migration that will create tables and load data:
+  5. Run the Migration that will create tables and load data:
   
-    cd nuagesdr/nuagesdr
-    python ./manage.py migrate
-    python manage.py loaddata backend/fixtures/initial_data.json 
+		cd nuagesdr/nuagesdr
+		python ./manage.py migrate
+		python manage.py loaddata backend/fixtures/initial_data.json 
 
   
-  5. Install backend python packages:
+  6. Install backend python packages:
   
 		cd <project_root> # that would be nuagesdr
 		pip install -r requirements.txt
   
-  6. Install frontend npm packages:
+  7. Install frontend npm packages:
   
 		cd <project_root> # that would be nuagesdr
 		cd frontend
@@ -84,26 +91,32 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 
 ## Backend
 
-	* Run the following to start the backend application:
+* Run the following to start the backend application:
 	
-	 cd <project_root> # that would be nuagesdr
-	 cd nuagesdr
-    python manage.py runserver
+		cd <project_root> # that would be nuagesdr
+		cd nuagesdr
+		python manage.py runserver
 	
 
 ## Frontend
 
-	* Run the following to start the frontend application:
+* Run the following to start the frontend application:
 		     
-     cd <project_root> # that would be nuagesdr
-     cd frontend
-     npm run dev	
+		cd <project_root> # that would be nuagesdr
+		cd frontend
+		npm run dev	
 
 ## Run Test on RESP Api endpoint:
 
-	cd nuagesdr/frontend
-	npm test
+		cd nuagesdr/frontend
+		npm test
 
+* The following is tests with the above command:
+
+1. Site is up
+2. REST endpoint is up and returns a JSON file
+3. Retrieves a single record from REST API
+4. Retrieves all records from REST API.
 	
 
 

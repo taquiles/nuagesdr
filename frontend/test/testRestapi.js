@@ -9,7 +9,7 @@ app.get('/user', function(req, res) {
 });
 
 
-describe("Tests REST API, on the beckend(python->django->drf), and retrive some risk types info", function () {
+describe("Tests REST API, on the beckend(python->django->drf), and retrieve some risk types info", function () {
 
   it("Site is up", function (done) {
     request
