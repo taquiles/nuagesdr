@@ -10,11 +10,20 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
+
 import os
+import sys
+ 
+# Basic Settings
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'nuagesdr'))
+ 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+FIXTURE_DIRS = (os.path.join(PROJECT_ROOT, 'fixtures'))
+FIXTURE_DIRS = ('fixtures')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -129,7 +138,8 @@ STATIC_URL = '/static/'
 CORS_ORIGIN_WHITELIST = (
     'hostname.example.com',
     'localhost:8081',
-    '127.0.0.1:8081'
+    '127.0.0.1:8081',
+    '127.0.0.1:8000'
     'localhost:8086',
     '127.0.0.1:8086'
     'localhost:*',
