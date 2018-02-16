@@ -4,12 +4,10 @@ outros/
 *~
 env/
 logs/
-/build/
 /config/
 /dist/
 frontend/env/
 frontend/ve/*
-frontend/build
 frontend/dist
 node_modules/
 /dist/

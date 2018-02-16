@@ -1,11 +1,13 @@
 
 This showcase implements a platform (or a feature subset) which allow to retrieve, from the backend, a Form so Insurence Careers may customize data to be collect per insurence.
 
+
 # Use Case
 
 The Use case is depicted bellow.
 
 ![Use Case](https://github.com/taquiles/nuagesdr/blob/master/docs/Use_Case-Nuages.png)
+
 
 # Architecture
 
@@ -15,6 +17,7 @@ DjangoRestframework, a Django framework, was used for Rest Library and for the M
 
 ![System-Components](https://github.com/taquiles/nuagesdr/blob/master/docs/Stack-System-Components.png)
 
+
 # Database
 
 The ER Diagram below includes two more tables to contextualize properly tables that were implemented
@@ -22,51 +25,70 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 ![ERD](https://github.com/taquiles/nuagesdr/blob/master/docs/ERD-NuagesDR.png)
 
 
-# Startup the Application
+# Requisits and Configuration
 
-## Requisits
+  1. To run this showcase, and for better compliance with tests done, verify if the following versions are installed:
+  
+  * Python and pip: 6.3.1
+  * node : 6.10.3
 
-  * To run this showcase verify if the following version are installed:
-  1. Python : 6.3.1
+  2. In order to configure data access *settings.py* must updated
   
-
-## Database 
+  	2.1. Configure the database name (*DATABASES.NAME*);
+  	2.2. Update *user* and *password* with right permissions  (*DATABASES.USER* and *DATABASES.PASSWORD*);
+  	2.3. On *postgresql* create a database whose name the same as in step 1:
+  	
+  		e.g.
+  		CREATE DATABASE otherdb;
+    
+		DATABASES = {
+        'default': {
+     	     'ENGINE': 'django.db.backends.postgresql',
+	        'NAME': 'nuages',
+	        'USER': 'postgres',
+	        'PASSWORD': 'a',
+	        'HOST': 'localhost',
+	        'PORT': '5432',
+	     }
+	   }
   
-  * To start the application *settings.py* must updated :
-  1. Configure the database name (DATABASES.NAME) in the settings.py file) ;
-  2. Update *user* and *password* with right permissions;
-  3. On *postgresql* create a database whose name the same as in step 1.
-  
-    DATABASES = {
-      'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'nuages',
-        'USER': 'postgres',
-        'PASSWORD': 'a',
-        'HOST': 'localhost',
-        'PORT': '5432',
-       }
-     }   
-  
-  2. Run the Migration that will create tables and load data:
+  3. Run the Migration that will create tables and load data:
   
     cd nuagesdr/nuagesdr
     python ./manage.py migrate
     python manage.py loaddata backend/fixtures/initial_data.json 
 
+  
+  4. Install backend python packages:
+  
+		cd <project_root> # that would be nuagesdr
+		pip install -r requirements.txt
+  
+  5. Install frontend npm packages:
+  
+		cd <project_root> # that would be nuagesdr
+		cd frontend
+		npm install  
+
+
+# Startup the Application
+
 ## Backend
 
 	* Run the following to start the backend application:
 	
-    cd nuagesdr/frontend
-    npm run dev
+	 cd <project_root> # that would be nuagesdr
+	 cd nuagesdr
+    python manage.py runserver
+	
 
 ## Frontend
 
 	* Run the following to start the frontend application:
-		 
-    cd nuagesdr/nuagesdr
-    python manage.py runserver
+		     
+     cd <project_root> # that would be nuagesdr
+     cd frontend
+     npm run dev	
 
 ## Run Test on RESP Api endpoint:
 
