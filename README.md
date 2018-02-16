@@ -24,6 +24,12 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 
 # Startup the Application
 
+## Requisits
+
+  * To run this showcase verify if the following version are installed:
+  1. Python : 6.3.1
+  
+
 ## Database 
   
   * To start the application *settings.py* must updated :
