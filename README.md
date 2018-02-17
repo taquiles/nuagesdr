@@ -35,9 +35,9 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 
 2. Edit *settings.py* to configure database access
   
-2.1. Configure the database name (*DATABASES.NAME*);
-2.2. Update *user* and *password* with right permissions  (*DATABASES.USER* and *DATABASES.PASSWORD*);
-2.3. On *postgresql* create a database whose name the same as in step 1:
+	2.1. Configure the database name (*DATABASES.NAME*);
+	2.2. Update *user* and *password* with right permissions  (*DATABASES.USER* and *DATABASES.PASSWORD*);
+	2.3. On *postgresql* create a database whose name the same as in step 1:
   	
 		e.g.
 		CREATE DATABASE otherdb;
