@@ -11,7 +11,7 @@ The Use case is depicted bellow.
 
 # Architecture
 
-The pre requisites included Python and Vue (ES6 flavor).
+The prerequisites included Python and Vue (ES6 flavor).
 
 DjangoRestframework, a Django framework, was used for Rest Library and for the MVT pattern (Model-View-Template). Other option, with similar features, would be Flask.
 
@@ -27,21 +27,21 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 
 # Requisites and Configuration
 
-  1. To run this showcase, and for better compliance with tests done, verify if the following versions are installed:
+1. To run this showcase, and for better compliance with tests done, verify if the following versions are installed:
   
-  * Python and pip: 6.3.1
-  * node : 6.10.3
-  * *virtualenv* installed
+* Python and pip: 6.3.1
+* node : 6.10.3
+* *virtualenv* installed
 
-  2. Edit *settings.py* to configure database access
+2. Edit *settings.py* to configure database access
   
-  	2.1. Configure the database name (*DATABASES.NAME*);
-  	2.2. Update *user* and *password* with right permissions  (*DATABASES.USER* and *DATABASES.PASSWORD*);
-  	2.3. On *postgresql* create a database whose name the same as in step 1:
+2.1. Configure the database name (*DATABASES.NAME*);
+2.2. Update *user* and *password* with right permissions  (*DATABASES.USER* and *DATABASES.PASSWORD*);
+2.3. On *postgresql* create a database whose name the same as in step 1:
   	
   		e.g.
   		CREATE DATABASE otherdb;
-    
+
 		DATABASES = {
         'default': {
      	     'ENGINE': 'django.db.backends.postgresql',
@@ -53,38 +53,36 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 	     }
 	   }
   
-  3. After database access configuration, you may choose to run
+3. After database access configuration, you may choose to run
   
-		chmod -x install_all.sh
-		./install.sh
+	chmod -x install_all.sh
+	./install.sh
   		
-	 	which will perfom all the remaining step and Startup the Application
+which will perfom all the remaining steps.
   
-  4. Create Python Environment:
-  	
-		cd <project_root> # that would be nuagesdr
-		cd nuagedr
-		virtualenv --python=python3.6 env
-		source env/bin/activate
-  		
-  
-  5. Run the Migration that will create tables and load data:
-  
-		cd nuagesdr/nuagesdr
-		python ./manage.py migrate
-		python manage.py loaddata backend/fixtures/initial_data.json 
+4. Create Python Environment:
 
+	cd <project_root> # that would be nuagesdr
+	cd nuagedr
+	virtualenv --python=python3.6 env
+	source env/bin/activate
+  		  
+5. Install backend python packages:
+ 
+	cd <project_root> # that would be nuagesdr
+	pip install -r requirements.txt
+	
+6. Run the Migration that will create tables and load data:
+ 
+	cd nuagesdr/nuagesdr
+	python ./manage.py migrate
+	python manage.py loaddata backend/fixtures/initial_data.json 
   
-  6. Install backend python packages:
+7. Install frontend npm packages:
   
-		cd <project_root> # that would be nuagesdr
-		pip install -r requirements.txt
-  
-  7. Install frontend npm packages:
-  
-		cd <project_root> # that would be nuagesdr
-		cd frontend
-		npm install  
+	cd <project_root> # that would be nuagesdr
+	cd frontend
+	npm install  
 
 
 # Startup the Application
@@ -93,23 +91,23 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 
 * Run the following to start the backend application:
 	
-		cd <project_root> # that would be nuagesdr
-		cd nuagesdr
-		python manage.py runserver
+	cd <project_root> # that would be nuagesdr
+	cd nuagesdr
+	python manage.py runserver
 	
 
 ## Frontend
 
 * Run the following to start the frontend application:
 		     
-		cd <project_root> # that would be nuagesdr
-		cd frontend
-		npm run dev	
+	cd <project_root> # that would be nuagesdr
+	cd frontend
+	npm run dev	
 
 ## Run Test on RESP Api endpoint:
 
-		cd nuagesdr/frontend
-		npm test
+	cd nuagesdr/frontend
+	npm test
 
 * The following is tests with the above command:
 
