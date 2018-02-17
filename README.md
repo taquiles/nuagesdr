@@ -15,7 +15,7 @@ The prerequisites included Python and Vue (ES6 flavor).
 
 DjangoRestframework, a Django framework, was used for Rest Library and for the MVT pattern (Model-View-Template). Other option, with similar features, would be Flask.
 
-![System-Components](https://github.com/taquiles/nuagesdr/blob/master/docs/Stack-System-Components.png)
+![System-Components](https://github.com/taquiles/nuagesdr/blob/master/docs/Stack-System-Components1.png)
 
 
 # Database
