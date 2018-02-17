@@ -39,50 +39,50 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 2.2. Update *user* and *password* with right permissions  (*DATABASES.USER* and *DATABASES.PASSWORD*);
 2.3. On *postgresql* create a database whose name the same as in step 1:
   	
-  		e.g.
-  		CREATE DATABASE otherdb;
+		e.g.
+		CREATE DATABASE otherdb;
 
 		DATABASES = {
-        'default': {
-     	     'ENGINE': 'django.db.backends.postgresql',
-	        'NAME': 'nuages',
-	        'USER': 'postgres',
-	        'PASSWORD': 'a',
-	        'HOST': 'localhost',
-	        'PORT': '5432',
-	     }
-	   }
+			'default': {
+				'ENGINE': 'django.db.backends.postgresql',
+					'NAME': 'nuages',	        
+					'USER': 'postgres',
+					'PASSWORD': 'a',
+					'HOST': 'localhost',
+					'PORT': '5432',
+			}
+		}
   
 3. After database access configuration, you may choose to run
   
-	chmod -x install_all.sh
-	./install.sh
+		chmod -x install_all.sh
+		./install.sh
   		
 which will perfom all the remaining steps.
   
 4. Create Python Environment:
 
-	cd <project_root> # that would be nuagesdr
-	cd nuagedr
-	virtualenv --python=python3.6 env
-	source env/bin/activate
+		cd <project_root> # that would be nuagesdr
+		cd nuagedr
+		virtualenv --python=python3.6 env
+		source env/bin/activate
   		  
 5. Install backend python packages:
  
-	cd <project_root> # that would be nuagesdr
-	pip install -r requirements.txt
+		cd <project_root> # that would be nuagesdr
+		pip install -r requirements.txt
 	
 6. Run the Migration that will create tables and load data:
  
-	cd nuagesdr/nuagesdr
-	python ./manage.py migrate
-	python manage.py loaddata backend/fixtures/initial_data.json 
+		cd nuagesdr/nuagesdr
+		python ./manage.py migrate
+		python manage.py loaddata backend/fixtures/initial_data.json 
   
 7. Install frontend npm packages:
   
-	cd <project_root> # that would be nuagesdr
-	cd frontend
-	npm install  
+		cd <project_root> # that would be nuagesdr
+		cd frontend
+		npm install  
 
 
 # Startup the Application
@@ -91,23 +91,23 @@ which will perfom all the remaining steps.
 
 * Run the following to start the backend application:
 	
-	cd <project_root> # that would be nuagesdr
-	cd nuagesdr
-	python manage.py runserver
+		cd <project_root> # that would be nuagesdr
+		cd nuagesdr
+		python manage.py runserver
 	
 
 ## Frontend
 
 * Run the following to start the frontend application:
 		     
-	cd <project_root> # that would be nuagesdr
-	cd frontend
-	npm run dev	
+		cd <project_root> # that would be nuagesdr
+		cd frontend
+		npm run dev	
 
 ## Run Test on RESP Api endpoint:
 
-	cd nuagesdr/frontend
-	npm test
+		cd nuagesdr/frontend
+		npm test
 
 * The following is tests with the above command:
 
