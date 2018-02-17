@@ -1,10 +1,10 @@
 
-This showcase implements a platform (or a feature subset) which allow to retrieve, from the backend, a Form so Insurence Careers may customize data to be collect per insurence.
+This showcase implements a platform (or a feature subset) which allow to retrieve, from the backend, a Form so Insurance Careers may customize data to be collected per insurance.
 
 
 # Use Case
 
-The Use case is depicted bellow.
+The Use case is depicted below.
 
 ![Use Case](https://github.com/taquiles/nuagesdr/blob/master/docs/Use_Case-Nuages.png)
 
@@ -39,7 +39,7 @@ The ER Diagram below includes two more tables to contextualize properly tables t
 	
 	2.2. Update *user* and *password* with right permissions  (*DATABASES.USER* and *DATABASES.PASSWORD*);
 	
-	2.3. On *postgresql* create a database whose name the same as in step 1:
+	2.3. On *postgresql* create a database whose name is the same as in step 1:
   	
 		e.g.
 		CREATE DATABASE otherdb;
@@ -111,7 +111,7 @@ which will perfom all the remaining steps.
 		cd nuagesdr/frontend
 		npm test
 
-* The following is tests with the above command:
+* The above performs the following tests:
 
 1. Site is up
 2. REST endpoint is up and returns a JSON file
