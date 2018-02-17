@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'nuagesdr.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lixo',
+        'NAME': 'nuages',
         'USER': 'postgres',
         'PASSWORD': 'a',
         'HOST': 'localhost',
