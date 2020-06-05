@@ -8,7 +8,7 @@ colorama==0.3.7
 command-not-found==0.3
 defer==1.0.6
 devscripts===2.14.1ubuntu0.1
-Django==2.0.2
+Django==2.2.13
 django-cors-headers==2.1.0
 djangorestframework==3.7.7
 docutils==0.14
