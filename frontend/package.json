@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "buefy": "^0.6.3",
+    "buefy": "^0.7.2",
     "vue": "^2.5.2",
     "vue-select": "^2.4.0",
     "vuetify": "^1.0.0"
