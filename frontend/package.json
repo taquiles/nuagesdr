@@ -14,7 +14,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": "^0.21.1",
     "buefy": "^0.6.3",
     "vue": "^2.5.2",
     "vue-select": "^2.4.0",
